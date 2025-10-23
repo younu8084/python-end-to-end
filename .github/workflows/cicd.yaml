@@ -1,4 +1,4 @@
-name: build and deploy python app to kubernetes
+name: build and deploy python app to kubernetes kind cluster
 
 on: 
     push:
