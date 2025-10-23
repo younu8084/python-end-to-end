@@ -1,6 +1,6 @@
 name: build and deploy python app to kubernetes
 
-On:
+on:
     push:
         branches:
         - main  
