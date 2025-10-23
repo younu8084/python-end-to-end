@@ -1,6 +1,6 @@
 name: build and deploy python app to kubernetes
 
-on:
+on:git 
     push:
         branches:
         - main  
@@ -27,7 +27,8 @@ jobs:
       
     - name: Start Flask app and test endpoint
       run: |
-        python /src/main.py &
+        cd src
+        python main.py &
         sleep 5
         curl -f http://127.0.0.1:30002 || (echo "Flask app failed to start" && exit 1)
 
