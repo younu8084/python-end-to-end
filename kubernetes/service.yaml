@@ -7,10 +7,7 @@ metadata:
 spec:
   type: NodePort
   selector:
-    app: service
+    app: deployment
   ports:
-    - name: http
-      protocol: TCP
-      nodeport: 30002 
-      port: 5000         
-      targetPort: 30002 
+  - port: 5000
+    targetPort: 30002

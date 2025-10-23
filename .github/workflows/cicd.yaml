@@ -65,3 +65,9 @@ jobs:
 
     - name: Verify Deployment
       run: kubectl get pods
+
+    - name: Verify Service
+      run: kubectl get services
+
+    - name: Test Application Endpoint
+      run: kubectl port-forward -n default svc/python-service 30002:5000
